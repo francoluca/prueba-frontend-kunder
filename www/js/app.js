@@ -8,6 +8,7 @@
 
       app.controller('MarvelController', function($scope,$http,md5){
           $scope.comics = [];
+          $scope.thumbnails = [];
           var publicKey = 'eda41fddfede76ce5e93da44207bb312';
           var privateKey = '86cb34221752d5df1c0a70554c619d29d492e417';
           var ts = Date.now();
@@ -20,12 +21,13 @@
                 ts: ts,
                 apikey: publicKey,
                 hash: hash,
-                limit: 50
+                limit: 100
               }
             }).success(function(comics){
               //console.log(comics);
               angular.forEach(comics.data.results, function(comic){
-                  $scope.comics.push(comic.title);
+                  $scope.comics.push(comic);
+                  console.log(comic.thumbnail.path+'.'+comic.thumbnail.extension);
               })
           });
           
