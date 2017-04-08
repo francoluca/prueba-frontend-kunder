@@ -13,7 +13,7 @@
           var ts = Date.now();
 
           var hash = md5.createHash(ts+privateKey+publicKey);
-          var baseUrl = 'http://gateway.marvel.com/v1/';
+          var baseUrl = 'https://gateway.marvel.com/v1/';
           
           $http.get(baseUrl + 'public/comics', {
               params: {
