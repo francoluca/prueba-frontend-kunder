@@ -1,7 +1,7 @@
 <!-- Header -->
 <ion-header-bar class="bar-dark">
-    <img class="logo_marvel" src="img/logo_marvel.png">
-    <h1 class="title">Cómics</h1>
+	<img class="logo_marvel" src="../img/marvel_logo.png">
+    <h1 class="title">Lista de Cómics</h1>
 </ion-header-bar>
       
 <!-- Sub-Header -->
@@ -15,10 +15,10 @@
 <!-- Contenido -->
 <ion-content class="has-subheader" ng-controller="MarvelController">
     <ion-list>
-        <a class="item item-thumbnail-left item-text-wrap" ng-repeat="comic in comics | filter: busqueda">
+        <a class="item item-thumbnail-left item-text-wrap" ng-repeat="comic in comics | filter: busqueda" href="#/tab/lista/{{comic.id}}">
 	        <img ng-src="{{comic.thumbnail}}" />
     	    <h2>{{comic.title}}</h2>
-        	<h3>{{comic.year}}</h3>
+        	<h3>({{comic.year}})</h3>
         	<p>
             	{{comic.description | limitTo: 120}}
             	{{comic.description.length > 120 ? '&hellip;' : ''}}

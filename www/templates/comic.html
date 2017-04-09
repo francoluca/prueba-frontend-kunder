@@ -1,0 +1,42 @@
+<ion-header-bar class="bar-dark">
+	<h2 class="title">Información del Cómic</h2>
+</ion-header-bar>
+
+<ion-view>
+	<ion-content>
+		<ion-list class="list-inset">
+			<ion-item class="item-text-wrap" ng-repeat="comic in comics | filter: { id: itemComic }">
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="item-image">
+								<img ng-src="{{comic.thumbnail}}">	
+							</div>
+						</div>
+					</div>
+					<div class="col">		
+						<h2>{{comic.title}}</h2>
+			        	<h3>Año: {{comic.year}}</h3>
+			        	<p>{{comic.description}}</p>
+			        	<h3 class="subtitulo">Personajes:</h3>
+						<div ng-repeat="character in comic.characters.items">
+							<p>{{character.name}},</p> 
+						</div>
+						<h3 class="subtitulo">Creadores:</h3>
+						<div ng-repeat="creator in comic.creators.items">
+							<p>{{creator.name+','+creator.role}},</p> 
+						</div>						
+					</div>						
+				</div>
+				<h3 class="subtitulo">Imágenes:</h3>
+				<div class="item row">
+					<div class="card card-images" ng-repeat="image in comic.images">
+						<div class="item item-image">
+						    <img ng-src="{{image.path+'.'+image.extension}}">
+						</div>	
+					</div>
+				</div>	
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

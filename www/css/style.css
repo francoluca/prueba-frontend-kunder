@@ -1,6 +1,49 @@
-img.logo_marvel{
-	width: 7em;
+.bar.bar-dark, .tabs-dark > .tabs{
+	background-color: #00796B;
+	border-color: #00796B; 
 }
-h1.title{
+
+.item-input-wrapper{
+	background-color: #B2DFDB;
+}
+
+.placeholder-icon, .placeholder {
+    color: #757575;
+}
+
+img.logo_marvel{
+	width: 6em; 
+}
+
+.item{
+	border-color: #cddc39;
+}
+
+.item-thumbnail-left img{
+	border-radius: 10px;
+}
+
+.item h2{
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #00796B;
+}
+
+.item h3{
+	font-size: 0.8rem;
+	color: #009688;	
+}
+
+.item img{
 	text-align: center;
+	width: 10em;
+}
+
+.subtitulo{
+	font-weight: bold;
+	padding-top: 20px;
+}
+
+.card-images{
+	width: 10em;
 }
