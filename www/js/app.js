@@ -33,7 +33,8 @@
                       "id": comic.id,
                       "title": comic.title,
                       "thumbnail": comic.thumbnail.path+'.'+comic.thumbnail.extension,
-                      "year": moment(comic.dates[0].date).format("YYYY")
+                      "year": moment(comic.dates[0].date).format("YYYY"),
+                      "description": comic.description
                     });
               })
 
